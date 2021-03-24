@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
     char secondByte = readByte(fd);
 
     while ( ((firstByte  & 0xFF) != 0xFF) ||
-            ((secondByte & 0xD0) != 0xD0)) {
+            ((secondByte & 0xE0) != 0xE0)) {
         firstByte = secondByte;
         secondByte = readByte(fd);
         bytesIn++;
